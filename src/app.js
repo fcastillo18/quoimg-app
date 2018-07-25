@@ -28,11 +28,11 @@ store.dispatch(loadQuote());
 store.dispatch(loadQuote());
 store.dispatch(loadQuote());
 
-store.dispatch(addQuoImg({
-    quoteAuthor: "Ralph Emerson", 
-    quoteText: "Good luck is another name for tenacity of purpose. ", 
-    quoteLink: "http://forismatic.com/en/9eedbbce1a/"}, 
-    'https://picsum.photos/200/200/?image=282'));
+// store.dispatch(addQuoImg({
+//     quoteAuthor: "Ralph Emerson", 
+//     quoteText: "Good luck is another name for tenacity of purpose. ", 
+//     quoteLink: "http://forismatic.com/en/9eedbbce1a/"}, 
+//     'https://picsum.photos/200/200/?image=282'));
 
 //console.log(imageApi.getRandomImage())
 // quoteApi.getRandomQuote().done((resp) => {
