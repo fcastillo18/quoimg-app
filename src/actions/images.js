@@ -18,3 +18,7 @@ export const loadImage = () => {
       });
   };
 }
+
+export const resetImages = () => ({
+  type: types.RESET_IMAGES
+});

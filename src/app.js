@@ -10,35 +10,16 @@ import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage'
-import { loadImage } from './actions/images';
-import { loadQuote } from './actions/quotes';
 import quoteApi from './api/QuoteApi';
 import imageApi from './api/ImageApi';
 import { addQuoImg } from './actions/quoImg';
+import { fetchImages, fetchQuotes } from './fixtures/init';
 
 const store = configureStore();
 
-//Loading images to show on Init Page
-store.dispatch(loadImage());
-store.dispatch(loadImage());
-store.dispatch(loadImage());
-
-//Loading quotes
-store.dispatch(loadQuote());
-store.dispatch(loadQuote());
-store.dispatch(loadQuote());
-
-// store.dispatch(addQuoImg({
-//     quoteAuthor: "Ralph Emerson", 
-//     quoteText: "Good luck is another name for tenacity of purpose. ", 
-//     quoteLink: "http://forismatic.com/en/9eedbbce1a/"}, 
-//     'https://picsum.photos/200/200/?image=282'));
-
-//console.log(imageApi.getRandomImage())
-// quoteApi.getRandomQuote().done((resp) => {
-//     console.log(resp);
-// });
-
+//dispathing actions to fetch images an quotes
+fetchImages(store.dispatch);
+fetchQuotes(store.dispatch);
 
 // console.log(store.getState());
 const jsx = ( 
@@ -74,3 +55,4 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
         //console.log('Log out');
     }
 // });
+

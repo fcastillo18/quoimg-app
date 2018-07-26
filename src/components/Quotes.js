@@ -7,6 +7,7 @@ const Quotes = (props) => {
       {
         props.quotes.map((quoteObj, idx) =>( <p key={idx}> {quoteObj.quoteText}  <i>{quoteObj.quoteAuthor}</i></p>) )
       }
+      <button>New quotes</button>
     </div>
   )
 }

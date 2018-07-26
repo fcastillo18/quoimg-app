@@ -10,6 +10,11 @@ export default (state = imagesReducerDefaultState, action) => {
         ...state, 
         action.image
       ]
+      
+    case types.RESET_IMAGES:
+    return [
+      //imagesReducerDefaultState
+    ]
 
     default:
       return state;
