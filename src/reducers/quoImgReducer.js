@@ -7,11 +7,7 @@ export default (state = quoImgReducerDefaultState, action) => {
     case types.ADD_QUOIMG:
     //console.log(action);
       return {
-        quote: {
-          text: action.quote.quoteText,
-          author: action.quote.quoteAuthor,
-          link: action.quote.quoteLink
-        },
+        quote: action.quote,
         image: action.image
       }
 

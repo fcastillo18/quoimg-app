@@ -19,3 +19,7 @@ export const loadQuote = () => {
       })
   }
 }
+
+export const resetQuotes = () => ({
+  type: types.RESET_QUOTES
+});

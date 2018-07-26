@@ -10,7 +10,9 @@ export default (state = quotesReducerDefaultState, action) => {
         ...state,
         action.quote
       ]
-
+    case types.RESET_QUOTES:
+    return []
+    
     default:
       return state;
   }

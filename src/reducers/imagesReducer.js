@@ -12,9 +12,7 @@ export default (state = imagesReducerDefaultState, action) => {
       ]
       
     case types.RESET_IMAGES:
-    return [
-      //imagesReducerDefaultState
-    ]
+    return []
 
     default:
       return state;

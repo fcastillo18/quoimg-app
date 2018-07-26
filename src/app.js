@@ -13,13 +13,14 @@ import LoadingPage from './components/LoadingPage'
 import quoteApi from './api/QuoteApi';
 import imageApi from './api/ImageApi';
 import { addQuoImg } from './actions/quoImg';
-import { fetchImages, fetchQuotes } from './fixtures/init';
+import { fetchImages, fetchQuotes, fetchQuoImg } from './fixtures/init';
 
 const store = configureStore();
 
 //dispathing actions to fetch images an quotes
 fetchImages(store.dispatch);
 fetchQuotes(store.dispatch);
+fetchQuoImg(store.dispatch);
 
 // console.log(store.getState());
 const jsx = ( 
