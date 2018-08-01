@@ -20,7 +20,7 @@ const store = configureStore();
 //dispathing actions to fetch images an quotes
 fetchImages(store.dispatch);
 fetchQuotes(store.dispatch);
-fetchQuoImg(store.dispatch);
+//fetchQuoImg(store.dispatch);
 
 // console.log(store.getState());
 const jsx = ( 

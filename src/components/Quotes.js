@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { resetQuotes, loadQuote } from '../actions/quotes';
+import { addQuoImg } from '../actions/quoImg';
 
 class Quotes extends React.Component {
 
@@ -11,11 +12,16 @@ class Quotes extends React.Component {
     this.props.loadQuote();
   }
 
+  handleNewQuoImg = (quote) => {
+    //console.log(`value: ${image}`);
+    this.props.addQuoImg(quote, this.props.quoImg.image);
+  }
+
   render(){
     return ( 
       <div>
         {
-          this.props.quotes.map((quoteObj, idx) =>( <p key={idx}> {quoteObj.quoteText}  <i>{quoteObj.quoteAuthor}</i></p>) )
+          this.props.quotes.map((quoteObj, idx) =>( <p key={idx} onClick={ () => this.handleNewQuoImg(quoteObj) }> {quoteObj.quoteText}  <i>{quoteObj.quoteAuthor}</i></p>) )
         }
         <button onClick={this.handleQuotes}>New quotes</button>
       </div>
@@ -24,12 +30,14 @@ class Quotes extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  quotes: [...state.quotes]
+  quotes: [...state.quotes], 
+  quoImg: state.quoImg
 })
 
 const mapDispatchToProps = (dispatch) => ({
   resetQuotes: () => dispatch(resetQuotes()),
-  loadQuote:   () => dispatch(loadQuote())
+  loadQuote:   () => dispatch(loadQuote()),
+  addQuoImg:  (quote, image) => dispatch(addQuoImg(quote, image))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Quotes);

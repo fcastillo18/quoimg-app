@@ -29,7 +29,6 @@ class DashboardPage extends Component{
 
                 <div id="quoimg"> 
                     <QuoImg />
-                    <button>QuoImg</button>
                 </div> 
 
             </div>
