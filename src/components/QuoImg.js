@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import selectImage from '../selectors/images';
 import selectQuote from '../selectors/quotes';
 import { addQuoImg } from '../actions/quoImg';
+import CanvasQuoImg from './CanvasQuoImg';
 
 class QuoImg extends React.Component {
 
@@ -11,17 +12,6 @@ class QuoImg extends React.Component {
   }
 
   shouldComponentUpdate = (nextProps) => {
-    // let resultQuote = this.props.quotes != undefined;
-    // let resultImage = this.props.images != undefined;
-
-    // if (resultQuote & resultImage 
-    //     & this.props.quotes.length === 3 
-    //     & this.props.quotes.length === 3) {
-    //   //console.log('shouldComponentUpdate: ', this.props.quotes.length)
-    //   return true;
-    // } else {
-    //   return false;
-    // }
     return this.props.quoImg !== nextProps.quoImg;
   }
 
@@ -30,7 +20,19 @@ class QuoImg extends React.Component {
   // }
 
   render(){
-    //console.log('QuoImg: render call: ', this.props.quoImg);
+    const quote = this.props.quoImg.quote;
+    const image= this.props.quoImg.image ;
+    //console.log('CenterQuoteImg.js---> ', image, quote);
+    if (quote && image) {
+        return(
+            <div>
+                <CanvasQuoImg image={image} quote={quote.quoteText} author={quote.quoteAuthor} width="300" height="300" />
+            </div>  
+        )
+    }else {
+        return <div></div>
+    }
+    /*
     return (
       <div id="quoimg"> 
         <br/>
@@ -40,7 +42,7 @@ class QuoImg extends React.Component {
         </p>
         {<button onClick={this.handleClick}>New QuoImg</button>}
       </div> 
-    )
+    )*/
   }
 }
 

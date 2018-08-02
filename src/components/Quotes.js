@@ -14,7 +14,7 @@ class Quotes extends React.Component {
 
   handleNewQuoImg = (quote) => {
     //console.log(`value: ${image}`);
-    this.props.addQuoImg(quote, this.props.quoImg.image);
+    this.props.addQuoImg(quote, this.props.quoImg.image+'&blur');
   }
 
   render(){
