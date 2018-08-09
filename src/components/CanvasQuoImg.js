@@ -29,10 +29,11 @@ export default class CanvasQuoImg extends Component {
     noneStyle ={
       display: 'none'
     };
+    
     render() {
       //console.log(this.props, 'CanvasQuoteImg') 
       return(
-        <div>
+        <div >
           <canvas ref="canvas" width={this.props.width} height={this.props.height} />
           <img ref="image" src={this.props.image} className="hidden" style={this.noneStyle} />
         </div>

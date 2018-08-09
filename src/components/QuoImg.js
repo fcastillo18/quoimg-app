@@ -15,18 +15,21 @@ class QuoImg extends React.Component {
     return this.props.quoImg !== nextProps.quoImg;
   }
 
-  // componentDidMount () {
-  //   this.props.addQuoImg(selectQuote(this.props.quotes), selectImage(this.props.images))
-  // }
+  componentDidMount () {
+    this.props.addQuoImg("Your quote", "http://via.placeholder.com/400x400?text=Image...")
+  }
 
   render(){
     const quote = this.props.quoImg.quote;
-    const image= this.props.quoImg.image ;
+    let image= this.props.quoImg.image ;
     //console.log('CenterQuoteImg.js---> ', image, quote);
     if (quote && image) {
+      image = image.replace('200', '400');
+      image = image.replace('200', '400');
+      console.log(image);
         return(
-            <div>
-                <CanvasQuoImg image={image} quote={quote.quoteText} author={quote.quoteAuthor} width="300" height="300" />
+            <div className="quoimg">
+                <CanvasQuoImg image={image} quote={quote.quoteText} author={quote.quoteAuthor} width="400" height="400" />
             </div>  
         )
     }else {

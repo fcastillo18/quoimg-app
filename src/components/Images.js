@@ -6,6 +6,10 @@ import { addQuoImg } from '../actions/quoImg';
 
 class Images extends React.Component {
 
+  componentDidMount(){
+    
+  }
+
   handleNewImages = () => {
     console.log(this.props);
     this.props.resetImages();
@@ -21,16 +25,17 @@ class Images extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="image-container">
+      <h3 className="row">Images</h3>
         {
           this.props.images.map((img, idx) => (
-            <img key={idx} id="image_container--item" src={img}
+            <img key={idx} className="image-container__item" src={img}
                  onClick={ () => this.handleNewQuoImg(img)}/>
                 )
           )
         }
         <br/>
-        <button onClick={this.handleNewImages}>New images</button>
+        <button className="button" onClick={this.handleNewImages}>New images</button>
       </div>
     )
   }

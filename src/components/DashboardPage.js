@@ -17,20 +17,20 @@ class DashboardPage extends Component{
 
     render() {
         return  (
-            <div id="container">
-                Dashboard page content
-                <div id="image_container">
-                    <Images />
+            <div className="row">
+            
+            
+                <div className="body-container">
+                    
+                    <section className="section-one">
+                        <Images />
+                        <Quotes />
+                    </section>
+
+                    <section className="section-two">
+                        <QuoImg />
+                    </section>
                 </div>
-
-                <div id="quote_container">
-                    <Quotes />
-                </div>
-
-                <div id="quoimg"> 
-                    <QuoImg />
-                </div> 
-
             </div>
         );
     }

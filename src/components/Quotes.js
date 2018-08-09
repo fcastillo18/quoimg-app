@@ -19,11 +19,13 @@ class Quotes extends React.Component {
 
   render(){
     return ( 
-      <div>
+      <div className="quote-container">
+      <br/>
+      <h3 className="row">Quotes</h3>
         {
           this.props.quotes.map((quoteObj, idx) =>( <p key={idx} onClick={ () => this.handleNewQuoImg(quoteObj) }> {quoteObj.quoteText}  <i>{quoteObj.quoteAuthor}</i></p>) )
         }
-        <button onClick={this.handleQuotes}>New quotes</button>
+        <button className="button" onClick={this.handleQuotes}>New quotes</button>
       </div>
     )
   }
