@@ -25,16 +25,19 @@ class Images extends React.Component {
 
   render() {
     return (
-      <div className="image-container">
-      <h3 className="row">Images</h3>
-        {
-          this.props.images.map((img, idx) => (
-            <img key={idx} className="image-container__item" src={img}
-                 onClick={ () => this.handleNewQuoImg(img)}/>
-                )
-          )
-        }
-        <br/>
+      <div>
+        <div className="image-container">
+          <h3 className="row">Images</h3>
+            {
+              this.props.images.map((img, idx) => (
+                <img key={idx} 
+                     className="image-container__item" 
+                     src={img}
+                     onClick={ () => this.handleNewQuoImg(img)}
+                    />)
+              )
+            }
+          </div>
         <button className="button" onClick={this.handleNewImages}>New images</button>
       </div>
     )

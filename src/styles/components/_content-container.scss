@@ -14,16 +14,18 @@
   // max-width: 100%;
   // width: 60%;
   //border: 1px solid orange;
+  min-height: 250px;
 }
 
 .image-container__item {
   padding: 0 $m-size $s-size 0;
+  border-radius: 15px;
 }
 
 .quote-container {
   // margin-left: 11rem; 
   padding-right: 40px;
-  //border: 1px solid red;
+  min-height: 200px;
 }
 
 .quoimg {
@@ -37,6 +39,14 @@
   //10rem 0 0 10rem
   // float: right;
   // overflow: auto;
+}
+
+.quoimg-sharing{
+  float: right;
+}
+
+canvas {
+  border-radius: 25px ;
 }
 
 .section-one{

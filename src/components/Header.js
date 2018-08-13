@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux' 
-import { startLogout } from '../actions/auth';
+import { startLogin, startLogout } from '../actions/auth';
 //exact={true}
 export const Header = ({ startLogout }) =>(
     <header className="header">
@@ -12,7 +12,8 @@ export const Header = ({ startLogout }) =>(
             </Link> 
             {//<NavLink to='/edit' activeClassName="is-active">Edit Expense</NavLink>
             }
-            <button className="button button--link" onClick={startLogout}>Logout</button>
+            <button className="button button--link" onClick={startLogin}>Login</button>
+        {/*<button className="button button--link" onClick={startLogout}>Logout</button>*/}
         </div>
     </div>
         

@@ -20,8 +20,10 @@ export default class CanvasQuoImg extends Component {
         ctx.drawImage(img, 0, 0)//image position 1=RL 2=UD
         ctx.font = "bold 14px Courier"
         ctx.fillStyle = 'white'
-        ctx.fillText(this.props.quote, 0, 75)//text position 1st= Rigth & Left 2nd=Up & Dowm
-        ctx.fillText(this.props.author, 100, 100)
+        const quote = this.props.quote;
+        const author = this.props.author;
+        ctx.fillText(quote == undefined ? '': quote, 0, 75)//text position 1st= Rigth & Left 2nd=Up & Dowm
+        ctx.fillText(author == undefined ? '': author, 100, 100)
       }
       
     }

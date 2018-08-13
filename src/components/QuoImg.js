@@ -16,7 +16,7 @@ class QuoImg extends React.Component {
   }
 
   componentDidMount () {
-    this.props.addQuoImg("Your quote", "http://via.placeholder.com/400x400?text=Image...")
+    this.props.addQuoImg("Your quote", "http://via.placeholder.com/400x400?text=QuoImg")
   }
 
   render(){
@@ -30,6 +30,16 @@ class QuoImg extends React.Component {
         return(
             <div className="quoimg">
                 <CanvasQuoImg image={image} quote={quote.quoteText} author={quote.quoteAuthor} width="400" height="400" />
+                <div className="quoimg-sharing">
+                  <a href="#"><i className="button--sharing fab fa-facebook fa-2x" ></i></a>
+                  <a href="#"><i className="button--sharing fab fa-twitter fa-2x" ></i></a>
+                  <a href="#"><i className="button--sharing fas fa-save fa-2x" ></i></a>
+                </div>
+                {/*
+                  <ion-icon name="logo-facebook" size="large"></ion-icon> <a href="#">Facebook</a>
+                <ion-icon name="logo-twitter" size="large"></ion-icon> <a href="#">Twiter</a>
+                <ion-icon name="save" size="large"></ion-icon> <a href="#">Save</a>
+                */}
             </div>  
         )
     }else {
