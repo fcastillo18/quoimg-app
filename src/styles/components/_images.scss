@@ -1,0 +1,19 @@
+.image-container {
+  margin: 0;
+  padding: 0;
+  // max-width: 100%;
+  // width: 60%;
+  //border: 1px solid orange;
+  min-height: 250px;
+}
+
+.image-container__item {
+  margin-top: $s-size;
+  padding: 0 $m-size $s-size 0;
+  border-radius: 15px 15px;
+  transition: transform .2s; /* Animation */
+}
+
+.image-container__item:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
