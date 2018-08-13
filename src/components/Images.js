@@ -26,8 +26,10 @@ class Images extends React.Component {
   render() {
     return (
       <div>
+      {/*<h3 className="row ">Images</h3>*/}
+      <button className="button" onClick={this.handleNewImages}>New images</button>
         <div className="image-container">
-          <h3 className="row">Images</h3>
+        
             {
               this.props.images.map((img, idx) => (
                 <img key={idx} 
@@ -38,7 +40,7 @@ class Images extends React.Component {
               )
             }
           </div>
-        <button className="button" onClick={this.handleNewImages}>New images</button>
+        
       </div>
     )
   }

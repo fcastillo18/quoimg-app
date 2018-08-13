@@ -20,14 +20,15 @@ class Quotes extends React.Component {
   render(){
     return ( 
       <div>
+      <button className="button" onClick={this.handleQuotes}>New quotes</button>
         <div className="quote-container">
         <br/>
-        <h3 className="row">Quotes</h3>
+        {/*<h3 className="row vertical-text ">Quotes</h3>*/}
           {
-            this.props.quotes.map((quoteObj, idx) =>( <p key={idx} onClick={ () => this.handleNewQuoImg(quoteObj) }> {quoteObj.quoteText}  <i>{quoteObj.quoteAuthor}</i></p>) )
+            this.props.quotes.map((quoteObj, idx) =>( <p key={idx} className="quote-item" onClick={ () => this.handleNewQuoImg(quoteObj) }> {quoteObj.quoteText}  <i>{quoteObj.quoteAuthor}</i></p>) )
           }
         </div>
-        <button className="button" onClick={this.handleQuotes}>New quotes</button>
+        
       </div>
     )
   }

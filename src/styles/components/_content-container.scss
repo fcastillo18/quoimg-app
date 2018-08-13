@@ -8,51 +8,7 @@
  display: flex;
 }
 
-.image-container {
-  margin: 0;
-  padding: 0;
-  // max-width: 100%;
-  // width: 60%;
-  //border: 1px solid orange;
-  min-height: 250px;
-}
-
-.image-container__item {
-  padding: 0 $m-size $s-size 0;
-  border-radius: 15px;
-}
-
-.quote-container {
-  // margin-left: 11rem; 
-  padding-right: 40px;
-  min-height: 200px;
-}
-
-.quoimg {
-  top: 25%;
-  position: absolute;
-  margin-left: 5rem;
-  // margin: 0 auto;
-  //border: 1px solid blue;
-  // margin: 5rem 10rem;
-  // // padding: 0 $l-size;
-  //10rem 0 0 10rem
-  // float: right;
-  // overflow: auto;
-}
-
-.quoimg-sharing{
-  float: right;
-}
-
 canvas {
   border-radius: 25px ;
 }
 
-.section-one{
-  width: 60%
-}
-
-.section-two{
-  width: 40%;
-}

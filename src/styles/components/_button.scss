@@ -9,9 +9,10 @@
   padding: $s-size;
   text-decoration: none;
   border-radius: 5px;
+  //margin-top: $m-size;
 }
 .button:hover{
-
+  background: $dark-blue;
 }
 
 .button--link {
