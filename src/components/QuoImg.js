@@ -4,6 +4,9 @@ import selectImage from '../selectors/images';
 import selectQuote from '../selectors/quotes';
 import { addQuoImg } from '../actions/quoImg';
 import CanvasQuoImg from './CanvasQuoImg';
+import { CompactPicker }from 'react-color';
+import SketchColorPicker from './SketchColorPicker';
+import ButtonExample from './ButtonExample';
 
 class QuoImg extends React.Component {
 
@@ -35,6 +38,8 @@ class QuoImg extends React.Component {
                   <a href="#"><i className="button--sharing fab fa-twitter fa-2x" ></i></a>
                   <a href="#"><i className="button--sharing fas fa-save fa-2x" ></i></a>
                 </div>
+                <SketchColorPicker />
+                <ButtonExample />
                 {/*
                   <ion-icon name="logo-facebook" size="large"></ion-icon> <a href="#">Facebook</a>
                 <ion-icon name="logo-twitter" size="large"></ion-icon> <a href="#">Twiter</a>
